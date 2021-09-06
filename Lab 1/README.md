@@ -82,10 +82,15 @@ Sketch a storyboard of the interactions you are planning. It does not need to be
 
 \*\***Include a picture of your storyboard here**\*\*
 
+<img src="./part_a_storyboard.png" height="500">
+
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 
 \*\***Summarize feedback you got here.**\*\*
 
+* Roommate: This device is very useful, especially in our current time where working from home is being a new normal.
+
+* Friend: In addition to the light source, there could be some fail-safe functions like making some nosies after a while, in case the parents miss the light. 
 
 ## Part B. Act out the Interaction
 
@@ -93,7 +98,17 @@ Try physically acting out the interaction you planned. For now, you can just pre
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
 
+* The initial plan involved using the room light as the alerting light. But the intensity of that is very low especially during the day. So we shifted towards a table/bedside lamp.
+
+* Also, it is hard to act out and record scenes happening in different rooms at the same time, which is easy to deliver on paper.
+
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+
+* The light source should be placed somewhere more visible, and ideally more portable.
+
+* We decided to place the mobile phone controlled using tinkerbelle inside the table lamp instead of using the light bulb in the lamp itself as a lightsource.
+
+* Changing the intensity of the light based on the baby’s volume could be done using other light sources like smart lighting.
 
 
 ## Part C. Prototype the device
@@ -108,16 +123,20 @@ If you run into technical issues with this tool, you can also use a light switch
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
 
+* Tinkerbelle works great with colour changing and the interaction is seamless. We hope it can include features such as blinking and gradual variation of intensity too. 
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
+https://user-images.githubusercontent.com/61882479/132265559-582975f9-10b3-45e4-92f4-24be33df4b6e.mov
+
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
 \*\***Show the follow-up work here.**\*\*
 
+<img src="./part_d_storyboard.png" height="500">
 
 ## Part E. Costume the device
 
@@ -127,17 +146,24 @@ Think about the setting of the device: is the environment a place where the devi
 
 \*\***Include sketches of what your device might look like here.**\*\*
 
+<img src="./part_e_device.png" height="500">
+
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
 
+* As we understood from the acting out step, the communication has to be equally effective both during the day and at night. So we decided to use the bedside lamp. 
+
+* Also a better alternative to the device would be a smart lamp controlled again by the sound of the baby’s noise.
 
 ## Part F. Record
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
+https://user-images.githubusercontent.com/61882479/132265759-aa718a62-0f79-4f30-8f78-4ea776a0d43e.mov
+
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
-
+I collaborated with Neha Manjunath(nm468), Tianyun Zou(tz392), Yehao Zhang(yz2444) on this lab. 
 
 # Staging Interaction, Part 2 
 
