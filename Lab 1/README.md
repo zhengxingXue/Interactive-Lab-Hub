@@ -178,23 +178,23 @@ You will be assigned three partners from another group. Go to their github pages
 
 1. Necessity of the system
 
-* One feedback is that it may be possible to hear directly the baby crying, so it could be unnecessary to use such a device as a notification.
+  * One feedback is that it may be possible to hear directly the baby crying, so it could be unnecessary to use such a device as a notification.
 
-* We previously thought that the babies and the parents were in different rooms, and that the parents could be too engaged in the work, for example when they wore headphones when attending online meetings. To address this feedback, we updated our storyboard by adding a headset for the main character.
+  * We previously thought that the babies and the parents were in different rooms, and that the parents could be too engaged in the work, for example when they wore headphones when attending online meetings. To address this feedback, we updated our storyboard by adding a headset for the main character.
 
 2. Sending notifications in different ways
 
-* One feedback suggested that this device would be more useful if the signalling device is not stationary. The parent could be moving around the house ex: kitchen, washroom. So we decided to include another non intrusive signalling device like a smartwatch that vibrates when the baby is crying.
+  * One feedback suggested that this device would be more useful if the signalling device is not stationary. The parent could be moving around the house ex: kitchen, washroom. So we decided to include another non intrusive signalling device like a smartwatch that vibrates when the baby is crying.
 
 3. Expand the features
 
-* The previous system could only tell whether the baby was crying or not. One of our peers suggested using more colors to indicate whether the baby was asleep, awake, or crying. Also, the system should allow users to customize on which device/s they would prefer receiving the notifications, like the lamp or smartwatch or both.
+  * The previous system could only tell whether the baby was crying or not. One of our peers suggested using more colors to indicate whether the baby was asleep, awake, or crying. Also, the system should allow users to customize on which device/s they would prefer receiving the notifications, like the lamp or smartwatch or both.
 
-* We address these feedbacks in our storyboard and the video. Specifically, the lamp is just a normal light source working on its own when the baby is sleeping. When the baby wakes up, the lamp starts to flash. The parent can turn it off using a mobile app, or using the connected smart watch to turn off the notification. If the baby starts to cry, the lamp should turn red. The parent can go comforting the baby and turn off the alert using the app or the smart watch.
+  * We address these feedbacks in our storyboard and the video. Specifically, the lamp is just a normal light source working on its own when the baby is sleeping. When the baby wakes up, the lamp starts to flash. The parent can turn it off using a mobile app, or using the connected smart watch to turn off the notification. If the baby starts to cry, the lamp should turn red. The parent can go comforting the baby and turn off the alert using the app or the smart watch.
 
 4. Change the color of the lamp with Tinkerbelle
 
-* One common question that we got from our peers was how we changed the color of the lamp. We placed a mobile phone with Tinkerbelle set up on it in the lamp. And then when we changed the color on the laptop, the light of the lamp changed accordingly.
+  * One common question that we got from our peers was how we changed the color of the lamp. We placed a mobile phone with Tinkerbelle set up on it in the lamp. And then when we changed the color on the laptop, the light of the lamp changed accordingly.
 
 ## Make it your own
 
@@ -205,14 +205,16 @@ Do last week’s assignment again, but this time:
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
 
-Storyboard
+* The basic settings of our interactive device is pretty much the same. The modifications we made in part 2 is discussed in the feedback section above. 
+
+* Storyboard
 
 <img src="./part_2_storyboard.png" height="500">
 
-Device
+* Device
 
 <img src="./part_2_device.png" height="200">
 
-Record
+* Record
 
 https://user-images.githubusercontent.com/52665472/133176126-1ab64ed9-1229-43f4-b94a-cb7a4b40af06.MP4
