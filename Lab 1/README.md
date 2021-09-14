@@ -205,7 +205,7 @@ Do last week’s assignment again, but this time:
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
 
-* The basic settings of our interactive device is pretty much the same. The modifications we made in part 2 is discussed in the feedback section above. 
+* The basic settings of our interactive device is pretty much the same. The modifications we made in part 2 are discussed in the feedback section above. 
 
 * Storyboard
 
