@@ -74,47 +74,77 @@ def draw_circle(center_coordinate, radius, fill = 'white', outline = 'black'):
     draw.ellipse((x-radius, y-radius, x+radius, y+radius), fill=fill, outline=outline)
 
 # helper function for draing 'clock eye'
-def draw_clock_eye(big_center, big_r, small_r, theta):
+def draw_clock_eye(big_center, big_r, small_r, theta, compensation = 1):
     draw_circle(center_coordinate=big_center, radius=big_r, fill='white')
+    r = big_r - small_r + compensation  # compensate for the edge
     small_center = (
-        big_center[0] + (big_r - small_r) * math.sin(theta),
-        big_center[1] + (big_r - small_r) * math.cos(theta)
+        big_center[0] + r * math.sin(theta),
+        big_center[1] + r * math.cos(theta)
     )
     draw_circle(center_coordinate=small_center, radius=small_r, fill='black')
+
+# clock eye, drawing constant
+big_r, small_r = 30, 25
+clock_eye_y = big_r + 10
+spacing = big_r * 2 + 30
+
+# clock mouth, drawing constant
+mouth_width, mouth_height = width / 2, height-big_r*2-20
+m_x0, m_y0 = width/2 - mouth_width/2, big_r*2 - 5
+m_x1, m_y1 = m_x0 + mouth_width, m_y0 + mouth_height
+m_bounding_box = [m_x0, m_y0, m_x1, m_y1]
+
+# clock teeth, drawing constant
+t_width, t_height = 15, 15
+t_x0, t_y0 = width/2 - t_width/2, m_y1
+t_x1, t_y1 = t_x0 + t_width, t_y0 + t_height
+t_bounding_box = [t_x0, t_y0, t_x1, t_y1]
+
+SHOW_TEETH = False
+SHOW_DEBUG_INFO = False
 
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    
+    # clock eye for seconds 
+    draw_clock_eye(
+        big_center = (width / 2 + spacing / 2, clock_eye_y), 
+        big_r = big_r, 
+        small_r = small_r, 
+        theta = (30 - datetime.now().second) / 30 * math.pi # Transfrom theta to fit the clock convention
+    )
+    
+    # clock eye for minutes
+    draw_clock_eye(
+        big_center = (width / 2 - spacing / 2, clock_eye_y), 
+        big_r = big_r, 
+        small_r = small_r, 
+        theta = (30 - datetime.now().minute) / 30 * math.pi # Transfrom theta to fit the clock convention
+    )
 
-    # nothing pressed
-    if buttonA.value and buttonB.value:
-        big_r, small_r = 30, 20
-        spacing = big_r * 2 + 10
-        # clock eye for seconds 
-        draw_clock_eye(
-            big_center = (width / 2 + spacing / 2, height / 2), 
-            big_r = big_r, 
-            small_r = small_r, 
-            theta = (30 - datetime.now().second) / 30 * math.pi # Transfrom theta to fit the clock convention
-        )
-        # clock eye for minutes
-        draw_clock_eye(
-            big_center = (width / 2 - spacing / 2, height / 2), 
-            big_r = big_r, 
-            small_r = small_r, 
-            theta = (30 - datetime.now().minute) / 30 * math.pi # Transfrom theta to fit the clock convention
-        )
-        
-        draw.text((0,0), str(datetime.now().minute) + ":" + str(datetime.now().second), font=font, fill="white")
-        
+    # mouth
+    draw.arc(m_bounding_box, start = 30, end = 150, fill="white", width=3)
+
+    if SHOW_TEETH:
+        # teeth
+        draw.rectangle(t_bounding_box, fill="white")
+    
+    if SHOW_DEBUG_INFO: 
+        time_string = time.strftime("%H:%M:%S")
+        dx, dy = font.getsize(time_string)
+        draw.text((0, height - dy), time_string, font=font, fill="white")
+
+    # just button A pressed, show teeth
+    if buttonB.value and not buttonA.value:  
+        SHOW_TEETH = not SHOW_TEETH
     # just button B pressed, show digital clock display
     elif buttonA.value and not buttonB.value:  
-        time_string = time.strftime("%m/%d/%Y %H:%M:%S")
-        dx, dy = font.getsize(time_string)
-        x = (width - dx) / 2
-        y = (height - dy) / 2
-        draw.text((x, y), time_string, font=font, fill="#FFFFFF")
+        SHOW_DEBUG_INFO = not SHOW_DEBUG_INFO
+        # s = "Debug = " + str(SHOW_DEBUG_INFO)
+        # dx, dy = font.getsize(s)
+        # draw.text(((width - dx) / 2, (height - dy) / 2), s, font=font, fill="white")
 
     # Display image.
     disp.image(image, rotation)
-    time.sleep(1)
+    # time.sleep(1/3)
