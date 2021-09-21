@@ -196,7 +196,7 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
-The left eye represents the current second, and the right eye represents the current minute. 
+The left eye represents the current minute, and the right eye represents the current second. 
 
 https://user-images.githubusercontent.com/61882479/134104527-57f7827d-3d34-4952-900d-5ccf5eb1a8ee.mov
 
@@ -207,6 +207,7 @@ Press the bottom button will show the current time in digital format, which can 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
+<img src="part_g.png" height="500">
 
 # Prep for Part 2
 
