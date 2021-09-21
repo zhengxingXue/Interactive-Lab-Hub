@@ -196,7 +196,13 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
+The left eye represents the current second, and the right eye represents the current minute. 
+
 https://user-images.githubusercontent.com/61882479/134104527-57f7827d-3d34-4952-900d-5ccf5eb1a8ee.mov
+
+Press the top button will add/remove a tooth to the 'clock face'
+
+Press the bottom button will show the current time in digital format, which can be used for debugging or for users to get used to the representation. 
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
