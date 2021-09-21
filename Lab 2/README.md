@@ -196,6 +196,8 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
+https://user-images.githubusercontent.com/61882479/134104527-57f7827d-3d34-4952-900d-5ccf5eb1a8ee.mov
+
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
