@@ -86,7 +86,7 @@ def draw_clock_eye(big_center, big_r, small_r, theta, compensation = 1):
 # clock eye, drawing constant
 big_r, small_r = 25, 20
 clock_eye_y = big_r + 10
-spacing = big_r * 2 + 30
+spacing = big_r * 2 + 25
 
 # clock mouth, drawing constant
 mouth_width, mouth_height = width / 2, height-big_r*2-20
@@ -125,11 +125,40 @@ while True:
 
     draw.polygon(
         (
-            (width/2 - 20, height),
-            (width/2 - 50, height - 30),
-            (width/2 - 50, height)
+            (width/2 - 30, height),
+            (width/2 - 70, height - 40),
+            (width/2 - 70, height)
         ),
         outline=0, fill='green'
+    )
+
+    draw.polygon(
+        (
+            (width/2 - 70, height - 40),
+            (0, height - 20),
+            (0, height),
+            (width/2 - 70, height)
+        ),
+        outline=0, fill='red'
+    )
+
+    draw.polygon(
+        (
+            (width/2 + 30, height),
+            (width/2 + 70, height - 40),
+            (width/2 + 70, height)
+        ),
+        outline=0, fill='green'
+    )
+
+    draw.polygon(
+        (
+            (width/2 + 70, height - 40),
+            (width, height - 20),
+            (width, height),
+            (width/2 + 70, height)
+        ),
+        outline=0, fill='red'
     )
     
     # clock eye for seconds 
@@ -148,8 +177,15 @@ while True:
         theta = (30 - datetime.now().minute) / 30 * math.pi # Transfrom theta to fit the clock convention
     )
 
-    # nose
-    draw_circle(center_coordinate=(width/2, clock_eye_y+big_r), radius=9, fill='red')
+    # nose    
+    draw.polygon(
+        (
+            (width/2, clock_eye_y+big_r),
+            (width/2 - 15, clock_eye_y+big_r + 15),
+            (width/2 + 15, clock_eye_y+big_r + 15),
+        ),
+        outline=0, fill='red'
+    )
 
     # mouth
     # draw.arc(m_bounding_box, start = 0, end = 180, fill="white", width=3)
