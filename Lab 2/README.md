@@ -237,7 +237,17 @@ You are permitted (but not required) to work in groups and share a turn in; you 
     * Student A suggested the clock could have more color and become more like a face. 
     * Student B would like the clock to be able to show Hour indictor. 
 
-[my_clock_part_2.py](my_clock_part_2.py)
+* Improvement
+
+    * Although I tried to implement the 'blinking' animation, the final result is not particularly good. So, I bascially change the clock 'face' to 'Joker', the white background and blue eye should be more clear than the old black-white contrast. At the same time, I added four line indicator around the eye to better visualize '12, 3, 6, 9' or '0, 15, 30, 45'.
+    * For 'more like a face' part, I draw the Joker's face as the background of my clock. I had some trouble drawing the curved line with Pillow. But I think the current version using polygon and straight line is still good. 
+    * To show both 'HH:mm' and 'mm:ss', I add a green I2C button for mode switching. 
+        * In 'HH:mm' mode, the I2C button would blink green light every second, to indicator the time passed. 
+        * In 'mm:ss' mode, the I2C button would stay green. 
+
+* Code - [my_clock_part_2.py](my_clock_part_2.py)
+
+* Video
 
 https://user-images.githubusercontent.com/61882479/134961512-ef1c0185-205c-4962-aa58-8191b1979d72.mp4
 
