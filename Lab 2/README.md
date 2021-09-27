@@ -232,3 +232,7 @@ As always, make sure you document contributions and ideas from others explicitly
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
 
+
+https://user-images.githubusercontent.com/61882479/134961512-ef1c0185-205c-4962-aa58-8191b1979d72.mp4
+
+
