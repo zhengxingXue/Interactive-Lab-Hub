@@ -231,7 +231,13 @@ As always, make sure you document contributions and ideas from others explicitly
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
+* Feedback 
 
+    * Professor indicated that the eye movement is not obvious in the black background, and suggested some kind of 'blink' indication. 
+    * Student A suggested the clock could have more color and become more like a face. 
+    * Student B would like the clock to be able to show Hour indictor. 
+
+[my_clock_part_2.py](my_clock_part_2.py)
 
 https://user-images.githubusercontent.com/61882479/134961512-ef1c0185-205c-4962-aa58-8191b1979d72.mp4
 
