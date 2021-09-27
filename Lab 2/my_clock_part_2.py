@@ -4,6 +4,8 @@ from datetime import datetime
 import subprocess
 import digitalio
 import board
+import busio
+from i2c_button import I2C_Button
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 
@@ -30,6 +32,28 @@ disp = st7789.ST7789(
     x_offset=53,
     y_offset=40,
 )
+
+## Example code from library_example.py
+# initialize I2C
+i2c = busio.I2C(board.SCL, board.SDA)
+
+# scan the I2C bus for devices
+while not i2c.try_lock():
+	pass
+devices = i2c.scan()
+i2c.unlock()
+print('I2C devices found:', [hex(n) for n in devices])
+default_addr = 0x6f
+if default_addr not in devices:
+	print('warning: no device at the default button address', default_addr)
+
+# initialize the button
+button = I2C_Button(i2c)
+
+button.led_bright = 50
+button.led_gran = 0
+button.led_cycle_ms = 0
+button.led_off_ms = 0
 
 # Create blank image for drawing.
 # Make sure to create image with mode 'RGB' for full color.
@@ -159,7 +183,7 @@ def draw_face_clothe():
         outline=0, fill='red'
     )
 
-SHOW_TEETH = False
+SHOW_HOUR = True
 SHOW_DEBUG_INFO = False
 
 while True:
@@ -169,21 +193,38 @@ while True:
     # draw face and clothe
     draw_face_clothe()
 
-    # clock eye for seconds 
-    draw_clock_eye(
-        big_center = (width / 2 + spacing / 2, clock_eye_y), 
-        big_r = big_r, 
-        small_r = small_r, 
-        theta = (30 - datetime.now().second) / 30 * math.pi # Transfrom theta to fit the clock convention
-    )
+    if not SHOW_HOUR:
+        # clock eye for seconds 
+        draw_clock_eye(
+            big_center = (width / 2 + spacing / 2, clock_eye_y), 
+            big_r = big_r, 
+            small_r = small_r, 
+            theta = (30 - datetime.now().second) / 30 * math.pi # Transfrom theta to fit the clock convention
+        )
     
-    # clock eye for minutes
-    draw_clock_eye(
-        big_center = (width / 2 - spacing / 2, clock_eye_y), 
-        big_r = big_r, 
-        small_r = small_r, 
-        theta = (30 - datetime.now().minute) / 30 * math.pi # Transfrom theta to fit the clock convention
-    )
+        # clock eye for minutes
+        draw_clock_eye(
+            big_center = (width / 2 - spacing / 2, clock_eye_y), 
+            big_r = big_r, 
+            small_r = small_r, 
+            theta = (30 - datetime.now().minute) / 30 * math.pi # Transfrom theta to fit the clock convention
+        )
+    else:
+        # clock eye for minutes 
+        draw_clock_eye(
+            big_center = (width / 2 + spacing / 2, clock_eye_y), 
+            big_r = big_r, 
+            small_r = small_r, 
+            theta = (30 - datetime.now().minute) / 30 * math.pi # Transfrom theta to fit the clock convention
+        )
+
+        # clock eye for hour
+        draw_clock_eye(
+            big_center = (width / 2 - spacing / 2, clock_eye_y), 
+            big_r = big_r, 
+            small_r = small_r, 
+            theta = (6 - datetime.now().hour % 12) / 12 * math.pi # Transfrom theta to fit the clock convention
+        )
 
     # nose    
     draw.polygon(
@@ -220,4 +261,20 @@ while True:
 
     # Display image.
     disp.image(image, rotation)
-    # time.sleep(1/3)
+
+    button.clear()
+    time.sleep(1/2)
+    # I2C button clicked
+    if button.status.been_clicked:
+        SHOW_HOUR = not SHOW_HOUR
+    
+    if SHOW_HOUR:
+        button.led_bright = 50
+        button.led_gran = 1
+        button.led_cycle_ms = 1000
+        button.led_off_ms = 1000
+    else:
+        button.led_bright = 50
+        button.led_gran = 0
+        button.led_cycle_ms = 0
+        button.led_off_ms = 0
