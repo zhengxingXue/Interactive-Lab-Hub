@@ -223,7 +223,7 @@ while True:
             big_center = (width / 2 - spacing / 2, clock_eye_y), 
             big_r = big_r, 
             small_r = small_r, 
-            theta = (6 - datetime.now().hour % 12) / 12 * math.pi # Transfrom theta to fit the clock convention
+            theta = (6 - datetime.now().hour % 12) / 6 * math.pi # Transfrom theta to fit the clock convention
         )
 
     # nose    
