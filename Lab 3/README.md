@@ -123,8 +123,8 @@ The device is basically a clock with voice interaction enabled. The clock starts
 
 * if the user get up (may be signaled by button pressed), reply "Let’s put a smile on that face!" and end interaction. 
 * if the user says something like "10 more minute", the clock checks the user's calender 
-      * if there is no plan around the alarm time, replay "Okay, next alarm in 10 minute", and update the alarm time to the new time. 
-      * if there is plan around the alrm time, replay "You have a plan, get up", and repeat. 
+   * if there is no plan around the alarm time, replay "Okay, next alarm in 10 minute", and update the alarm time to the new time. 
+   * if there is plan around the alrm time, replay "You have a plan, get up", and repeat. 
 
 ### Acting out the dialogue
 
