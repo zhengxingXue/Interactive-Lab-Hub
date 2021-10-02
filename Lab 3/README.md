@@ -115,8 +115,6 @@ Write out what you imagine the dialogue to be. Use cards, post-its, or whatever 
 | user.response == UserStatus.delay("10min") and user.plan is None | "Okay, next alarm at {time}." | 
 | user.response == UserStatus.delay("10min") and user.plan is not None | "You have plan at {plan[0].time}, get up!" | 
 
-<p align="right">* The Joker</p>
-
 \*\***Please describe and document your process.**\*\*
 
 The device is basically a clock with voice interaction enabled. The clock starts speech interaction when the alarm time is reached. The clock continues to ‘talk to’ the user until there is a response from the user. 
