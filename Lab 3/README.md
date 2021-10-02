@@ -115,7 +115,7 @@ Write out what you imagine the dialogue to be. Use cards, post-its, or whatever 
 | user.response == UserStatus.delay("10min") and user.plan is None | "Okay, next alarm at {time}." | 
 | user.response == UserStatus.delay("10min") and user.plan is not None | "You have plan at {plan[0].time}, get up!" | 
 
-\*The Joker
+<p align="right">* The Joker</p>
 
 \*\***Please describe and document your process.**\*\*
 
