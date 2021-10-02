@@ -107,11 +107,13 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
-```
-while true:
-   if (current_time >= alarm_time) and (user.is_awake == false):
-      devcie.speak(f"It is {current_time}, time to get up.")
-```
+| Situation | Device Response |
+| --- | --- |
+| current_time == alarm_time | "It is {current_time} now, get up!" |
+| user.response == UserStatus.sleep | "What doesn’t kill you, simply makes you stranger! hhhhhhh" |
+| user.response == UserStatus.getup | "Let’s put a smile on that face!" |
+| user.response == UserStatus.delay("10min") and user.plan is None | "Okay, next alarm at {time}." | 
+| user.response == UserStatus.delay("10min") and user.plan is not None | "You have plan at {plan[0].time}, get up!" | 
 
 \*\***Please describe and document your process.**\*\*
 
