@@ -138,6 +138,10 @@ The device is basically a clock with voice interaction enabled. The clock starts
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
 
+https://user-images.githubusercontent.com/61882479/135771571-ebfb7463-0acd-443e-b8eb-e7f913d66369.mov
+
+https://user-images.githubusercontent.com/61882479/135771574-f4df033d-a1c7-4738-a5c8-7be1f8c1c513.mov
+
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
 ### Wizarding with the Pi (optional)
