@@ -76,7 +76,7 @@ One thing you might need to pay attention to is the audio input setting of Pi. S
 
 demo:
 
-<img src="./part1/ask_for_zipcode/demo.png" height="500">
+<img src="./part1/ask_for_zipcode/demo.png">
 
 Bonus Activity:
 
