@@ -144,6 +144,10 @@ https://user-images.githubusercontent.com/61882479/135771574-f4df033d-a1c7-4738-
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
+The dialogue seemed quite similar to the design. But there are some undefined user behaviors (like ‘skip the class’ command in the second video). The ‘skip the …’ command can be added to the device. 
+
+But there are so many commands and it is hard to cover every possible circumstance. There could be some default behaviors when unknown commands occur, like ‘I do not understand the command’. Or let the user know the possible commands in advance. 
+
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
 
