@@ -10,16 +10,17 @@ import board
 import busio
 import json
 import socket
-
+import adafruit_mpu6050
 import signal
 import sys
 from queue import Queue
 
  
 i2c = busio.I2C(board.SCL, board.SDA)
+mpu = adafruit_mpu6050.MPU6050(i2c)
 
 hostname = socket.gethostname()
-hardware = 'plughw:2,0'
+hardware = 'plughw:3,0'
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -27,12 +28,22 @@ audio_stream = Popen("/usr/bin/cvlc alsa://"+hardware+" --sout='#transcode{vcode
 
 @socketio.on('speak')
 def handel_speak(val):
-    call(f"espeak '{val}'", shell=True)
+    command = """
+        say() { 
+            local IFS=+;/usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols "http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=$*&tl=en"; 
+        } ; 
+    """ + f"say '{val}'"
+    call(command, shell=True)
 
 @socketio.on('connect')
 def test_connect():
     print('connected')
     emit('after connect',  {'data':'Lets dance'})
+
+@socketio.on('ping-gps')
+def handle_message(val):
+    # print(mpu.acceleration)
+    emit('pong-gps', mpu.acceleration) 
 
 
 @app.route('/')

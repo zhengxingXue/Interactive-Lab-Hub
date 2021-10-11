@@ -35,13 +35,30 @@ const speak = document.getElementById('speak');
 // User Status Section 
 const user_sleep = document.getElementById('user_sleep');
 const user_getup = document.getElementById('user_getup');
+const user_jump = document.getElementById('user_jump');
+const user_delay_succeeded = document.getElementById('user_delay_succeeded');
+const user_delay_failed = document.getElementById('user_delay_failed');
 
 user_sleep.onclick = () => {
   socket.emit('speak', "What doesn’t kill you, simply makes you stranger!")
 }
 
 user_getup.onclick = () => {
+  socket.emit('speak', "Why so serious?")
+}
+
+user_jump.onclick = () => {
   socket.emit('speak', "Let’s put a smile on that face!")
+}
+
+user_delay_succeeded.onclick = () => {
+  wordsIn.value = "Okay, next alarm at "
+  wordsIn.focus()
+}
+
+user_delay_failed.onclick = () => {
+  wordsIn.value = "Get up, you have plan at "
+  wordsIn.focus()
 }
 
 // Speak section send button onclick 
@@ -74,4 +91,43 @@ socket.on('disconnect', () => {
   mic.src = ''
 });
 
+setInterval(() => {
+  socket.emit('ping-gps', 'dat')
+}, 100)
 
+var vlSpec = {
+  $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+  data: { name: 'table' },
+  width: 400,
+  mark: 'line',
+  encoding: {
+    x: { field: 'x', type: 'quantitative', scale: { zero: false } },
+    y: { field: 'y', type: 'quantitative' },
+    color: { field: 'category', type: 'nominal' }
+  }
+};
+vegaEmbed('#chart', vlSpec).then((res) => {
+  let x, y, z;
+  let counter = -1;
+  let cat = ['x', 'y', 'z']
+  let minimumX = -100;
+  socket.on('pong-gps', (new_x, new_y, new_z) => {
+    counter++;
+    minimumX++;
+    const newVals = [new_x, new_y, new_z].map((c, v) => {
+      return {
+        x: counter,
+        y: c,
+        category: cat[v]
+      };
+    })
+    const changeSet = vega
+      .changeset()
+      .insert(newVals)
+      .remove((t) => {
+        return t.x < minimumX;
+      });
+    res.view.change('table', changeSet).run();
+  })
+
+})

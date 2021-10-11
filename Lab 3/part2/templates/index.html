@@ -15,32 +15,41 @@
 </head>
 
 <body>
+
     <h1>Joker Clock</h1>
     <br>
 
     <div id="clock"></div>
     <br><br>
 
-    <label> User Status
-        <br>
-        <button id='user_sleep'>sleeping</button>
-        <button id='user_getup'>geting up</button>
-    </label>
-    <br><br>
-
-    <label> Speak
-        <input type="text" id='wordsIn'>
-        <button id='speak'>send</button>
-
-    </label>
-    <br><br>
-
-    <label> Listen
-        <br>
-        <button id='start_listen'>start</button>
-        <audio id='mic' src="http://{{ hostname }}.local:8080"></audio>
-    </label>
+    <label> Set alarm </label>
     <br>
+    <input type="time" id="appt-time" name="appt-time" value="09:00">
+    <br><br>
+
+    <label> User Status </label>
+    <br>
+    <button id='user_sleep'>sleeping</button>
+    <button id='user_getup'>geting up</button>
+    <button id='user_jump'>jumping</button>
+    <br>
+    <button id='user_delay_succeeded'>delay succeeded</button>
+    <button id='user_delay_failed'>delay failed</button>
+
+    <br><br>
+
+    <label> Speak </label>
+    <input type="text" id='wordsIn' style="width:280px">
+    <button id='speak'>send</button>
+    <br><br>
+
+    <label> Listen </label>
+    <br>
+    <button id='start_listen'>start</button>
+    <audio id='mic' src="http://{{ hostname }}.local:8080"></audio>
+    <br><br>
+
+    <div id='chart'></div>
 
     <script src="static/index.js"></script>
 </body>
