@@ -172,6 +172,8 @@ The system should:
 
 *Document how the system works*
 
+<img src="./part2/imgs/storyboard.jpeg">
+
 *Include videos or screencaptures of both the system and the controller.*
 
 ## Test the system
