@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js"></script>
+    <title>Joker Clock</title>
+</head>
+
+<body>
+    <h1>Joker Clock</h1>
+    <br>
+
+    <div id="clock"></div>
+    <br><br>
+
+    <label> User Status
+        <br>
+        <button id='user_sleep'>sleeping</button>
+        <button id='user_getup'>geting up</button>
+    </label>
+    <br><br>
+
+    <label> Speak
+        <input type="text" id='wordsIn'>
+        <button id='speak'>send</button>
+
+    </label>
+    <br><br>
+
+    <label> Listen
+        <br>
+        <button id='start_listen'>start</button>
+        <audio id='mic' src="http://{{ hostname }}.local:8080"></audio>
+    </label>
+    <br>
+
+    <script src="static/index.js"></script>
+</body>
+
+</html>
