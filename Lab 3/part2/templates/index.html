@@ -25,6 +25,7 @@
     <label> Set alarm </label>
     <br>
     <input type="time" id="appt-time" name="appt-time" value="09:00">
+    <button id='start_clock'>start</button>
     <br><br>
 
     <label> User Status </label>
@@ -43,13 +44,15 @@
     <button id='speak'>send</button>
     <br><br>
 
+    <label> Movement </label>
+    <br>
+    <div id='chart'></div>
+    <br><br>
+
     <label> Listen </label>
     <br>
     <button id='start_listen'>start</button>
     <audio id='mic' src="http://{{ hostname }}.local:8080"></audio>
-    <br><br>
-
-    <div id='chart'></div>
 
     <script src="static/index.js"></script>
 </body>

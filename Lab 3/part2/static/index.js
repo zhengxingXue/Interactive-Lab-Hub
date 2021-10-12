@@ -21,6 +21,12 @@ let clock = () => {
 };
 clock();
 
+const start_clock = document.getElementById('start_clock');
+
+start_clock.onclick = () => {
+  socket.emit('speak', "It is 9: 10 get up")
+}
+
 // setup socket
 const socket = io();
 socket.on('connect', () => {
