@@ -172,14 +172,22 @@ The system should:
 
 *Document how the system works*
 
+#### Updated storyboard
 <img src="./part2/imgs/storyboard.jpeg">
 
 *Include videos or screencaptures of both the system and the controller.*
 
-
+#### Video of the controller
 
 https://user-images.githubusercontent.com/61882479/137019942-6bca57c0-8b0c-4666-b0db-676b643a6f33.mov
 
+#### Video 1 of the interaction between the system and the user
+
+https://user-images.githubusercontent.com/52665472/137035782-504e5919-95e4-46b5-9e0d-d27223868a69.mp4
+
+#### Video 2 of the interaction between the system and the user
+
+https://user-images.githubusercontent.com/52665472/137036138-cc3fee9f-025d-4458-b9af-9315efd0b6b6.mp4
 
 
 ## Test the system
@@ -200,6 +208,7 @@ Answer the following:
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
+
 
 \*\**your answer here*\*\*
 
