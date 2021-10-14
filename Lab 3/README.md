@@ -196,19 +196,38 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+*What worked well:*\
+*1. The system worked well as an interactive alarm. Essential functions, such as snoozing, stopping, and rescheduling the alarm, were properly implemented so that the users could directly speak to the alarm to achieve all these functionalities.*\
+*2. The system could inform the users of upcoming events and send a notification right before the event.*\
+*3. The responses from the alarm were not like those of traditional smart alarm clocks. Some users found the conversation between them and the system interesting.*
+
+*What did not work well:*\
+*1. One of our peers thought the sound of the alarm was not loud enough to wake him up.*\
+*2. Because the system did not respond in a traditional way, some users thought the responses from the system were confusing.*\
+*3. Users could cheat the system without actually jumping ten times to prove he/she get up by shaking the wristband.*
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+*What worked well:*\
+*1. The controller could realize the basic interaction between the device and the person.*\
+*2. The controller had the ability to set the alarm and check the current time.*\
+*3. With the demo code and some modifications to the sound part, the controller could control the device to speak arbitrary sentences (but typing in the sentence takes time).*
+
+*What did not work well:*\
+*1. When the user’s response could not be answered through the scripted buttons, typing the response back to the user could take a while and it was error prone.*\
+*2. The eavesdrop functionality from the demo code required the user to directly speak to the microphone (otherwise the response was not good), so we used other ways (to be in the same room) to get the user’s responses.*\
+*3. The schedule part of the interaction was not implemented in the controller, i.e. we could not add the actual schedules/events into the controller.*
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
-
+*1. Make the existing features (response style, volume, and etc) more customizable could help the system satisfy the needs of a wider range of users.*\
+*2. WoZ was a great way to prototype a system in that we could get real feedbacks from testing users and we did not need to spend too much time building a completed system. It saved us great amount of time, and we could adopt suggestions quickly.*\
+*3. Users' behaviors were unpredictable. However sophisticated the system was, some users might still behave in a way that we did not anticipate. This, from another perspective, again proved the necessity of prototyping.*\
+*4. We should not let the participants in the test know there was a wizard behind the scene, otherwise they would suspect the effectiveness of the system.*
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-
-\*\**your answer here*\*\*
-
+*1. Videos of users using our system could be used to capture their postures and gestures to study interaction between human and interactive systems.*\
+*2. Conversations between the user and our system could be transcripted to observe how users reacted to an interactive system which did not respond as most current smart assistants.*\
+*3. Motion sensors or web cams might be utilized to capture the users' action of sitting up in bed.*
